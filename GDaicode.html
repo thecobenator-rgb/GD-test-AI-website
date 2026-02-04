@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Geometry Dash Fan Site</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        color: white;
+    }
+
+    header {
+        background: #111;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 4px solid #00ffff;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 3em;
+        color: #00ffff;
+    }
+
+    nav {
+        background: #000;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 10px;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    nav button {
+        background: #00ffff;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+
+    nav button:hover {
+        background: #00bbbb;
+    }
+
+    section {
+        max-width: 1000px;
+        margin: auto;
+        padding: 40px 20px;
+        display: none;
+    }
+
+    section.active {
+        display: block;
+    }
+
+    h2 {
+        color: #00ffff;
+        border-bottom: 2px solid #00ffff;
+        padding-bottom: 5px;
+    }
+
+    .card {
+        background: rgba(0,0,0,0.6);
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 10px;
+    }
+
+    ul {
+        line-height: 1.7;
+    }
+
+    .difficulty {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    .difficulty div {
+        background: #111;
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    footer {
+        background: #000;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+        font-size: 0.9em;
+        opacity: 0.8;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Geometry Dash</h1>
+    <p>The Rhythm-Based Platformer That Tests Human Limits</p>
+</header>
+
+<nav>
+    <button onclick="showSection('about')">What is GD?</button>
+    <button onclick="showSection('difficulty')">Difficulty</button>
+    <button onclick="showSection('players')">Top Players</button>
+    <button onclick="showSection('levels')">Top Levels</button>
+    <button onclick="showSection('history')">History</button>
+    <button onclick="showSection('facts')">Fun Facts</button>
+</nav>
+
+<!-- ABOUT -->
+<section id="about" class="active">
+    <h2>What is Geometry Dash?</h2>
+    <div class="card">
+        <p>
+            <strong>Geometry Dash</strong> is a rhythm-based platformer created by
+            <strong>RobTop Games</strong>. Players control a geometric icon and must
+            jump, fly, flip gravity, and time their movements perfectly to avoid obstacles.
+        </p>
+        <p>
+            Every level is synced to music, meaning success depends on timing,
+            memory, and extreme precision.
+        </p>
+        <p>
+            Geometry Dash is known for its brutal difficulty, massive community,
+            and user-created levels that push the game far beyond its original design.
+        </p>
+    </div>
+</section>
+
+<!-- DIFFICULTY -->
+<section id="difficulty">
+    <h2>Difficulty System</h2>
+    <div class="difficulty">
+        <div>
+            <h3>Easy</h3>
+            <p>Very forgiving, designed for beginners.</p>
+        </div>
+        <div>
+            <h3>Normal</h3>
+            <p>Introduces tighter jumps and rhythm.</p>
+        </div>
+        <div>
+            <h3>Hard</h3>
+            <p>Requires practice and memorization.</p>
+        </div>
+        <div>
+            <h3>Harder</h3>
+            <p>Fast-paced with little room for error.</p>
+        </div>
+        <div>
+            <h3>Insane</h3>
+            <p>Extremely precise gameplay.</p>
+        </div>
+        <div>
+            <h3>Demon</h3>
+            <p>The hardest category in the game.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <p>
+            Demon levels are further split into:
+            <strong>Easy Demon, Medium Demon, Hard Demon, Insane Demon, and Extreme Demon</strong>.
+            Extreme Demons can take thousands of attempts to beat.
+        </p>
+    </div>
+</section>
+
+<!-- PLAYERS -->
+<section id="players">
+    <h2>Top Geometry Dash Players</h2>
+    <div class="card">
+        <ul>
+            <li><strong>Zoink</strong> – Known for beating the hardest Extreme Demons</li>
+            <li><strong>nSwish</strong> – Former #1 demonlist player</li>
+            <li><strong>Trick</strong> – High skill consistency</li>
+            <li><strong>SpaceUK</strong> – Famous for demonlist dominance (legacy)</li>
+            <li><strong>Riot</strong> – Historic player, verifier of Bloodbath</li>
+        </ul>
+    </div>
+</section>
+
+<!-- LEVELS -->
+<section id="levels">
+    <h2>Top Levels (Legendary Difficulty)</h2>
+    <div class="card">
+        <ul>
+            <li><strong>Tidal Wave</strong> – One of the hardest levels ever created</li>
+            <li><strong>Acheron</strong> – Insanely tight timings</li>
+            <li><strong>Slaughterhouse</strong> – Extreme wave control</li>
+            <li><strong>Bloodbath</strong> – The level that changed GD history</li>
+            <li><strong>Sonic Wave</strong> – Iconic difficulty spike</li>
+        </ul>
+    </div>
+</section>
+
+<!-- HISTORY -->
+<section id="history">
+    <h2>History of Geometry Dash</h2>
+    <div class="card">
+        <p>
+            Geometry Dash was released in <strong>2013</strong>. Originally,
+            it was a simple mobile game with a few official levels.
+        </p>
+        <p>
+            Over time, RobTop added a <strong>level editor</strong>, allowing players
+            to create their own levels. This transformed the game into a massive
+            creative platform.
+        </p>
+        <p>
+            Today, Geometry Dash has millions of levels and one of the most
+            dedicated gaming communities ever.
+        </p>
+    </div>
+</section>
+
+<!-- FACTS -->
+<section id="facts">
+    <h2>Fun Facts</h2>
+    <div class="card">
+        <ul>
+            <li>Some levels take over 100,000 attempts to verify.</li>
+            <li>Geometry Dash levels can desync if your FPS changes.</li>
+            <li>Many extreme demons are harder than any official level.</li>
+            <li>The game still receives updates years later.</li>
+            <li>Players often use muscle memory more than reaction time.</li>
+        </ul>
+    </div>
+</section>
+
+<footer>
+    <p>Fan-made Geometry Dash website | Not affiliated with RobTop Games</p>
+</footer>
+
+<script>
+    function showSection(id) {
+        const sections = document.querySelectorAll("section");
+        sections.forEach(section => {
+            section.classList.remove("active");
+        });
+
+        document.getElementById(id).classList.add("active");
+    }
+</script>
+
+</body>
+</html>
